@@ -1,5 +1,6 @@
 :root {
-    --theme-color: #9351ff;
+    --theme-color: #b500ff;
+    --theme-color-secondary: #ffffff;
     --video-gray-style: 0%;
     --video-blackout: 50%;
 }
@@ -36,7 +37,7 @@ body {
     text-align: center;
     position: fixed;
     background: rgba(0, 0, 0, var(--video-blackout));
-    color: #f1f1f1;
+    color: var(--theme-color-secondary);
     width: 100%;
     height: 100%;
     display: flex;
@@ -69,23 +70,23 @@ body {
     text-decoration: none;
     transition: all .15s ease;
     background-color: var(--theme-color);
-    color: #ffffff;
+    color: var(--theme-color-secondary);
 }
 
 .links-buttons a.secondary {
-    color: #ffffff;
+    color: var(--theme-color-secondary);
     background-color: unset;
-    border: 1px solid #ffffff;
+    border: 1px solid var(--theme-color-secondary);
 }
 .links-buttons a:hover {
-    background-color: #fff;
+    background-color: var(--theme-color-secondary);
     color: var(--theme-color);
-    border-color: #fff;
+    border-color: var(--theme-color-secondary);
 }
 .links-buttons a.secondary:hover {
     background-color: var(--theme-color);
     border-color: var(--theme-color);
-    color: #fff;
+    color: var(--theme-color-secondary);
 }
 
 @media screen and (max-device-width: 720px) {
