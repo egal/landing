@@ -3,7 +3,11 @@
     --video-gray-style: 25%;
     --video-blackout: 25%;
 }
-
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 body {
     display: block;
     margin: 0;
@@ -35,17 +39,22 @@ body {
     color: #f1f1f1;
     width: 100%;
     height: 100%;
-    display:table-cell;
-    vertical-align:middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .content h1  {
     font-size: 150px;
     font-weight: 900;
+    margin-bottom: 10px;
 }
 
 .content p {
     font-weight: 100;
+    font-size: 25px;
+    margin-bottom: 30px;
 }
 
 .links-buttons a {
@@ -54,17 +63,37 @@ body {
     border: 1px solid var(--theme-color);
     box-sizing: border-box;
     display: inline-block;
-    font-size: 1.05rem;
     letter-spacing: .1rem;
     margin: .5rem 1rem;
     padding: .75em 2rem;
     text-decoration: none;
     transition: all .15s ease;
     background-color: var(--theme-color);
-    color: #fff;
+    color: #ffffff;
 }
 
 .links-buttons a.secondary {
-    color: var(--theme-color);
+    color: #ffffff;
     background-color: unset;
+    border: 1px solid #ffffff;
+}
+.links-buttons a:hover {
+    background-color: #fff;
+    color: var(--theme-color);
+    border-color: #fff;
+}
+.links-buttons a.secondary:hover {
+    background-color: var(--theme-color);
+    border-color: var(--theme-color);
+    color: #fff;
+}
+
+@media screen and (max-device-width: 720px) {
+    .content h1 {
+        font-size: 100px;
+    }
+    .content p {
+        font-size: 18px;
+        font-weight: 300;
+    }
 }
