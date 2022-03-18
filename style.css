@@ -1,7 +1,7 @@
 :root {
     --theme-color: #9351ff;
-    --video-gray-style: 25%;
-    --video-blackout: 25%;
+    --video-gray-style: 0%;
+    --video-blackout: 50%;
 }
 * {
     box-sizing: border-box;
